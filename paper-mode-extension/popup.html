@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Paper Mode</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="icon">📄</span>
+      <h1>Paper Mode</h1>
+    </header>
+
+    <label class="row toggle-row">
+      <span>Enabled</span>
+      <input type="checkbox" id="enabled" />
+      <span class="switch"></span>
+    </label>
+
+    <div class="row">
+      <label for="intensity">Texture intensity</label>
+      <input type="range" id="intensity" min="0" max="0.5" step="0.01" />
+    </div>
+
+    <div class="row">
+      <label for="texture">Texture style</label>
+      <select id="texture">
+        <option value="laid_fiber">Laid fiber (streaky)</option>
+        <option value="coldpress">Cold-press (blobby)</option>
+        <option value="recycled_fleck">Recycled fleck (dotty)</option>
+        <option value="linen_weave">Linen weave (grid)</option>
+        <option value="fine_matte">Fine matte grain (subtle)</option>
+        <option value="cotton_flecks">Cotton + fine flecks</option>
+        <option value="kraft_soft_fiber">Soft kraft fiber</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label for="tone">Paper tone</label>
+      <select id="tone">
+        <option value="cream">Cream</option>
+        <option value="white">Bright white</option>
+        <option value="kraft">Kraft / brown</option>
+        <option value="gray">Newsprint gray</option>
+      </select>
+    </div>
+
+    <button id="excludeBtn" class="secondary-btn"></button>
+
+    <p class="hint">Applies a rough paper-grain layer over every page, like a phone's e-reader paper mode.</p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
